@@ -6,7 +6,7 @@ This repository contains summaries and cheatsheets of a 5 year-long curriculum a
 
 The goal is to provide a clear, concise, consistent and structured overview of each courses. As their contents evolve over the years, some parts might be outdated, missing or need some rework to fit everyone's expectations. These summaries and cheatsheets are complement to original courses supports and might not be comprehensible without.
 
-Say thanks by staring :star: this repository, reporting [issues](https://github.com/zifeo/EPFL/issues/new) :bug: or even better [contribute back](https://github.com/zifeo/EPFL/pulls) :octocat: fixing an issue, improving clarity or adding new content.
+Say thanks by starring :star: this repository, reporting [issues](https://github.com/zifeo/EPFL/issues/new) :bug: or even better [contribute back](https://github.com/zifeo/EPFL/pulls) :octocat: fixing an issue, improving clarity or adding new content.
 
 ## Usage
 
