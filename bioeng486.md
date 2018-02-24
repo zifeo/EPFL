@@ -92,7 +92,7 @@ Fall 2017: Sensorimotor neuroprosthetics
 
   - internal model : neural mechanisms that mimics input-output relationships of limbs and external objects
 
-    - forward internal : predict sensory consequences of given motor command, provide mechanism to vercome delay involved in sensing actual outcome, mental simulation, CNS use this for grip force modulation
+    - forward internal : predict sensory consequences of given motor command, provide mechanism to overcome delay involved in sensing actual outcome, mental simulation, CNS use this for grip force modulation
     - inverse internal : starts from desired sensory state and outputs accordingly
     - grip force-load force coupling : observed when hand moved voluntarily while object held by finger opposing thumb, sensory delay in relaying change in load force to CNS 50-100ms
 
@@ -185,7 +185,7 @@ Fall 2017: Sensorimotor neuroprosthetics
     ![1D182606-AC01-4949-9809-F3E11C5D1164](img/1D182606-AC01-4949-9809-F3E11C5D1164.png)
 
 
-  - Bionic Glove : open loop with 4 superficial electrodes (3 stimulations with 1 references), voluntary wrist flexion initiate stimulation
+  - Bionic Glove : open loop with 4 superficial electrodes (3 stimulations with 1 reference), voluntary wrist flexion initiate stimulation
     ![8AD9BAA5-0C35-494F-9793-11A9AD416227](img/8AD9BAA5-0C35-494F-9793-11A9AD416227.png)
   - FreeHand : most advanced, 8 implanted epimysical electrodes and implanted stimulator, controlled by shoulder, high reliability
   - cuff electrodes : recruit several muscles, highly selective when possible, smoothness of recruitment questionable

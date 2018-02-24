@@ -72,11 +72,11 @@ Fall 2017: Statistics for data science
 - complement : $F^c$
 - disjoint : $F_1\cap F_2=\emptyset$
 - partition : $\{F_n\}_{n\ge 1}$ s.t. pairwise disjoint $\cup_{n\ge 1}F_n=\Omega$
-- difference : $F_1\setminus F_2=F_1\cap F_2^2$
+- difference : $F_1\setminus F_2=F_1\cap F_2^C$
 - probability measure : $\mathbb P=P$ defined over $\Omega$ assign probability to event, $P(F)\ge 0$, $P(\Omega)=1$, $P(F)=\sum_{n\ge 1}P(F_n)$
   - complement : $P(F^c)=1-P(F)$
   - intersection : $P(F_1\cap F_2)\le\min(P(F_1),P(F_2))$
-  - union : $P(F_1\cup F_2)=P(F_1) + P(F_2)+P(F_1\cap F_2)$
+  - union : $P(F_1\cup F_2)=P(F_1) + P(F_2)-P(F_1\cap F_2)$
   - continuity from below : $\{F_n\}_{n\ge 1}$ nested events s.t. $F_j\subseteq F_{j+1}$, $F=\cup_{n\ge 1}F_n$ implies $P(F_n)\overset{n\to\infty}{\longrightarrow} P(F)$
   - continuity from above : $\{F_n\}_{n\ge 1}$ nested events s.t. $F_j\supseteq F_{j+1}$, $F=\cap_{n\ge 1}F_n$ implies $P(F_n)\overset{n\to\infty}{\longrightarrow} P(F)$
 - conditional probability : $P(F_1\mid F_2)=\frac{P(F_1\cap F_2)}{P(F_2)}$
@@ -164,7 +164,7 @@ Fall 2017: Statistics for data science
     - markov : $P[X\ge \epsilon]\le\frac{E[X]}{\epsilon}$
     - chebyshev : $P[\abs{X-E[X]}\ge\epsilon]\le\frac{var[X]}{\epsilon^2}$
     - jensen : $\varphi(E[X])\le E[\varphi(X)]$ for any convex $\varphi$
-    - monotonicity and covariance : $cov[X,g(X)]\ge 0$
+    - monotonicity and covariance : $cov[X,g(X)]\ge 0$, $g$ decreasing
 
   - generating functions MGF : $M_X(t):\R\to\R\cup\{\infty\}$, $M_X(t)=E[e^{tX}]$
 
@@ -237,7 +237,7 @@ Fall 2017: Statistics for data science
   - $var[X]=r/\lambda^2$
   - $M(t)=(\frac{\lambda}{\lambda - t})^r$ for $t<\lambda$
   - $Y=\sum_{i=1}^r Y_i$ with $Y\iid Exp(\lambda)$, special case Erlang distribution
-- guassian : $X\sim N(\mu,\sigma^2)$ with mean $\mu\in\R$, variance $\sigma^2>0$
+- gaussian : $X\sim N(\mu,\sigma^2)$ with mean $\mu\in\R$, variance $\sigma^2>0$
   - $f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$
   - $E[X]=\mu$
   - $var[X]=\sigma^2$
@@ -291,12 +291,12 @@ Fall 2017: Statistics for data science
 - Fisher-Neyman factorization theorem : $T=T(\bs Y)$ sufficient iff $f(\bs y;\theta)=g(T(\bs y),\theta)h(\bs y)$
   - exponential family : sufficient $\tau_j(y_1,\ldots, y_n)=\sum_{i=1}^n T_j(y_i)$ as $f_{Y_1,\ldots, Y_n}(y_1,\ldots, y_n)=\exp(\sum_{j=1}^k\phi_j\tau_j(y_1,\ldots,y_n)-n\gamma(\phi_1,\ldots,\phi_n)+\sum_{i=1}^n S(y_i))$
 - minimally sufficient statistic : if for any other sufficient static $S=S(\bs Y)$, $\exists g\enspace T(\bs y)=g(G(\bs Y))$, if multiple there is bijection in between
-  - suppose $f(\bs y;\theta)/f(\bs z;\theta)$ independent of $\theta$ iff $T(\bs y)/T(\bs z)$, then $T$ minimally sufficient
+  - suppose $f(\bs y;\theta)/f(\bs z;\theta)$ independent of $\theta$ iff $T(\bs y)=T(\bs z)$, then $T$ minimally sufficient
 
 
 ### Sampling distibutions
 
-- sampling distribution : $F_T(t_1,\ldots,t_p)=P[T_1(Y_1,\ldots,Y_n)\le t_1,\ldots,T_q(Y_1,\ldots, Y_n)\le t_q]$ under $F(y_1,\ldots,y_n;\theta)$, often $q=1$, depends on unknown $\theta$
+- sampling distribution : $F_T(t_1,\ldots,t_p)=P[T_1(Y_1,\ldots,Y_n)\le t_1,\ldots,T_q(Y_1,\ldots, Y_n)\le t_q]$ under $F(y_1,\ldots,y_n;\theta)$, often $q=1$, depends on unknown $\theta$, distribution of a statistic
   - gaussian sufficient statistics : $Y_1,\ldots,Y_n\iid N(\mu,\sigma^2)$
     - $\bar Y=\frac{1}{n}\sum_{i=1}^n Y_i$ with $\bar Y\sim N(\mu,\sigma^2/n)$ and $E[\bar Y]=\mu$, $var(\bar Y)=\frac{\sigma^2}{n}$
     - $S^2=\frac{1}{n-1}\sum_{i=1}^n (Y_i-\bar Y)^2$ with $\frac{n-1}{\sigma^2}S^2\sim \chi^2_{n-1}$ and $E[S^2]=\sigma^2$, $var(S^2)=\frac{2\sigma^4}{n-1}$
@@ -319,7 +319,7 @@ Fall 2017: Statistics for data science
   - $Y_n\overset{p}{\to}Y$ implies $g(Y_n)\overset{p}{\to}g(Y)$
   - $Y_n\overset{d}{\to}Y$ implies $g(Y_n)\overset{d}{\to}g(Y)$
 - Slutsky's theorem : $X_n\overset{d}{\to} X$, $Y_n\overset{d}{\to}c$, $g(X_n,Y_n)\overset{d}{\to}g(X,c)$
-- law of large number : iid, $n^{-1}(Y_1+\cdots+Y_n)\overset{p}{\to}\mu$, for large $n$ $\bar Y\approx N(\mu,\sigma^2/n)$
+- law of large number : iid, $n^{-1}(Y_1+\cdots+Y_n)\overset{p}{\to}\mu$, for large $n$, $\bar Y\approx N(\mu,\sigma^2/n)$
 - central limit theorem CLT : iid, $\sqrt{n}(\frac{1}{n}\sum_{i=1}^n Y_i-\mu)\overset{d}{\to}N(0,\sigma^2)$, for large n $Y_1+\cdots+Y_n\approx N(n\mu,n\sigma^2)$
   - vector : $\sqrt{n}(\bar{\bs X} -\bs\mu)\overset{d}{\to}N_d(0,\bs \Omega)$
 - delta method : $a_n(X_n-\theta)\overset{d}{\to} Z$ with $g$ continuously differentiable, $a_n(g(X_n)-g(\theta))\overset{d}{\to}g'(\theta) Z$ as $a_n\uparrow\infty$
@@ -340,7 +340,7 @@ Fall 2017: Statistics for data science
 - consistency : if $\p_n\overset{p}{\to}\t$ as $n\to\infty$  
   - $P(\norm{\p-\t}>\epsilon)\le\frac{MSE(\p,\t)}{\epsilon^2}$, $MSE(\p_n,\t)\overset{n\to\infty}{\to}0$ vanishing MSE implies consistency but not the converse
 - identifiability : probability model $\{F_\t\}_{\t\in\Theta}$ idenfiable if for any pair $\t_1$ and $\t_2$, $\t_1\not=\t_2$ implies $F_{\t_1}\not=F_{\t_2}$
-- Fisher information : $\I_n(\t)=E[(\frac{\partial}{\partial\t}\log f(Y;\t))^2]=-E[\frac{\partial^2}{\partial\t^2}\log f(Y;\t)]$, $\I_n(\t)=n\I_1(\t)$
+- Fisher information : $\I_n(\t)=E[(\frac{\partial}{\partial\t}\log f(Y;\t))^2]=-E[\frac{\partial^2}{\partial\t^2}\log f(Y;\t)]$, $\I_n(\t)=n\I_1(\t)$ for iid, 1 over curvature
 - Cramér-Rao lower bound : unbiased estimator $var(\p(Y))\ge 1/\I_n(\t)$ (by Cauchy-Schwartz)
   - tight achievable : reach lower bound iff density $Y$ is one parameter expoential family with sufficient statistic $\p$
 - Rao-Blackwell theorem : unbiased estimator $\p$, sufficient $T$ for $\t$, $var(\p^*)\le var(\p)$ with $\p^*=E[\p\mid T]$, equality iff $P_\t(\p^*=\p)=1$
@@ -356,7 +356,7 @@ Fall 2017: Statistics for data science
   - consistency
     - $\t\in\R$ : yes, if regular enough and MLE unique
     - $\t\in R^p$ : need more info such as concavity + existence (exponential families)
-- asymptotic distribution of MLE : iid, regular enough, MLE existence and consistency implies $\sqrt{n}(\p_n-\t)\overset{d}{\to}N(0,\frac{\I_1(\t)}{\mathcal J^2_1(\t)})$, interpreted as $\p_n\overset{d}{\approx}N(\t,\frac{1}{n\I_1(\t)})\equiv N(0,\frac{1}{\I_n(\t)})$ 
+- asymptotic distribution of MLE : iid, regular enough, MLE existence and consistency implies $\sqrt{n}(\p_n-\t)\overset{d}{\to}N(0,\frac{\I_1(\t)}{\mathcal J^2_1(\t)})$, interpreted as $\p_n\overset{d}{\approx}N(\t,\frac{1}{n\I_1(\t)})\equiv N(\theta,\frac{1}{\I_n(\t)})$ 
   - meaning. MLE is approximately normally distributed, unbiased and achieving Cramér-Rao lower bound
   - regularity conditions
     - $\Theta$ open subset
@@ -397,19 +397,19 @@ Fall 2017: Statistics for data science
   - $1$                      type I error  😄
 - $0$$-$1 loss : $\L(a,\t)=\cases{1& \text{if}\;\t\in\Theta_0, a=1\;\text{(type I error)}\\ 1 &\text{if}\;\t\in\Theta_1, a=0\;\text{(type II error)}\\ 0&\text{otherwise}\qquad\quad\!\text{(no error)}}$
 - risk : $R(\delta,\t)=P_\t[\delta=1]1\{\t\in\Theta_0\}+P_\t[\delta = 0]1\{\t\in\Theta_1\}$
-- Neyman-Pearson framework : in application one type of error is more servere, exploit asymmetry by fixing tolerance ceiling for this error, consider only test function that respect it and focus on minimising the other
+- Neyman-Pearson framework : in application one type of error is more severe, exploit asymmetry by fixing tolerance ceiling for this error, consider only test function that respect it and focus on minimising the other
   - fix : $\alpha\in(0,1)$
   - test : $\delta\in\mathcal D(\Theta_0,\alpha)=\{\delta: sup_{\t\in\Theta_0} P_\t[\delta=1]\le\alpha\}$, type I error bounded above by $\alpha$
   - minimize : $P_\t[\delta(X)=0]=1-P_\t[\delta(X)=1]$
   - or maximize power : $\beta(\t,\delta)=P_\t[\delta(X)=1]=E_\t[1\{\delta(X)=1\}]=E_\t[\delta(X)]$
 - most powerful ML test : continuous case, $H_0:f=f_0$, $H1:f=f_1$, $\Lambda(Y)=f_1(Y)/f_0(Y)$, $\exists k>0$ s.t. $P_0[\Lambda(Y)\ge K]=\alpha$ with test of $H_0$ vs $H_1$ at significance level $\alpha$, $\delta(Y)=1\{\Lambda(Y)\ge k\}$, optimal
-  - reject if likelihood of $\t_0$ $k$ times higher than $\t_1$
+  - reject if likelihood of $\t_1$ $k$ times higher than $\t_0$
   - unless continuous, not guarantee to exist
 - one sided hypotheses : often uniformly most powerful test depending on model
 - likelihood ratio statistic LRT : $H_0:\t\in\Theta_0$, $H_1:\t\in\Theta_1$, $\Lambda(Y)=\frac{sup_{\t\in\Theta}f(Y;\t)}{sup_{\t\in\Theta_0}f(Y;\t)}=\frac{sup_{\t\in\Theta}L(\t)}{sup_{\t\in\Theta_0} L(\t)}$
   - distribution : $dist(\Lambda)$ most often intractable
   - asymptotic approximation : $\Theta$ open subset of $\R^p$, either $\Theta_0=\{\t_0\}$ or open subset $\R^s$ with $s<p$, iid, restrict attention to $H_0:\t=\t_0$ vs $H_1:\t\not=\t_0$, give $\Lambda_n(Y)=\Pi_{i=1}^n\frac{f(Y_i;\hat\t_n)}{f(Y_i;\t_0)}$ where $\hat\t_n$ MLE of $\t$
-- Wilks' theorem : iid, regular enough, $\I_i(\t)=\mathcal J_1(\t)$, 
+- Wilks' theorem : iid, regular enough with $\I_i(\t)=\mathcal J_1(\t)$, 
   - case $p=1$ : MLE sequence $\hat\t_n$ consistent for $\t$ implies likelihood ratio statistic $\Lambda_n$ for $H_0:\t=\t_0$ satisfying $2\log\Lambda_n\overset{d}{\to} V\sim\chi_1^2$ when $H_0$ true
   - case general $s\le p$ : MLE sequence $\hat\t_n$ consistent for $\t$ implies likelihood ratio statistic $\Lambda_n$ for $H_0:\{\t_j=\t_{j,0}\}_{j=1}^s$ satisfying $2\log\Lambda_n\overset{d}{\to} V\sim\chi_s^2$ when $H_0$ true
 - other tests
@@ -422,7 +422,7 @@ Fall 2017: Statistics for data science
 - pivot quantity : $g(Y,\t)$ if function both of $Y$ and $\t$ but its distribution does not depend on $\t$
 - confidence region : $R(Y)\subset\Theta$, $100(1-\alpha)$% conficence region for $\t\in\Theta\subset\R^p$ if $P_\t[R(Y)\ni\t]\ge 1-\alpha$
   - duality : $R(Y)=[L_1(Y),U_1(Y)]\times\cdots\times[L_p(Y),U_p(Y)]$, Bonferroni inequality implies $P_\t[R(Y)\ni\t]\ge 1-\sum_{i=1}^p P[\t_i\not\in[L_i(Y),U_i(Y)]]=1-\sum_{i=1}^p(1-q_i)$, thus $\sum_{i=1}^p(1-q_i)=\alpha$
-- Bonferroni's procedure : test each hypothesis separately at level $\alpha_t=\alpha/T$, rject $H_0$ if at least one of $\{H_{0,t}\}_{t=1}^T$
+- Bonferroni's procedure : test each hypothesis separately at level $\alpha_t=\alpha/T$, reject $H_0$ if at least one of $\{H_{0,t}\}_{t=1}^T$
 - Holm's procedure : reject $H_{0,t}$ for small values of corresponding $p$-value, $p_t$, order $p$-values from most to least significant $p_{(1)}\le\cdots\le p_{(T)}$, starting from $t=1$ going up, reject all $H_{0,(t)}$ s.t. $p_{(t)}$ significant at level $\alpha/(T-t+1)$, stop rejecting at first insignificant $p_{(t)}$
 - Yields Sime's procedure : independence, suppose reject $H_{0,j}$ for small values of $p_j$, order $p$-values from most to least significant $p_{(1)}\le\cdots\le p_{(T)}$, if for some $j=1,\ldots,T$, $p$-value $p_{(j)}$ significant at level $\frac{j\alpha}{T}$ thenreject global $H_0$
 - Hochberg's procedure : inpdendence, localise Sime, suppose reject $H_{0,j}$ for small values of $p_j$, order $p$-values from most to least significant $p_{(1)}\le\cdots\le p_{(T)}$, starting from $j=T,T-1,\ldots$, accept all $H_{0,(j)}$ s.t. $p_{(j)}$ insignificant at level $\alpha/(T-j+1)$, stop accepting for first $j$ s.t. $p_{(j)}$ significant at level $\alpha/j$ and reject all remaining ordered hypotheses past that $j$ going down
@@ -454,7 +454,7 @@ Fall 2017: Statistics for data science
 - bandwith in practice
   - pilot estimator : use parameter family, plug it into optimal bandwith expression
   - least square cross-validation : construct unbiased estimator of $IMSE$, choose $h$ to minimise it
-- leave-one-out cross validation : $LSCV(h)=\int_\R\hat f_h^2(x)dx-\frac{2}{n}\sum_{i=1}^n\hat f_{h,-i}(Y_i)$
+- leave-one-out cross validation : $LSCV(h)=\int_\R\hat f_h(x)dx-\frac{2}{n}\sum_{i=1}^n\hat f_{h,-i}(Y_i)$
   - Stone's theorem : bandwidth selected by cross-validation, $\frac{\int_\R(\hat f_{h_{CV}}(x)-f(x))^2 dx}{\inf_{h> 0}\int_\R (\hat f_h(x)-f(x))^2 dx}\overset{a.s}\to 1$ provided true density bounded
 - higher dimension KDE : $\hat f(x)=\frac{1}{n\abs{H}^{1/2}}\sum_{i=1}^n K(H^{-1/2}(x-Y_i))$ with $H\ge 0$ $d\times d$ bandwith matrix and $K(x_1,\ldots,x_n)=\Pi_{j=1}^d\varphi (x_j)$
   - curse of dimensionality : $h\propto n^{-\frac{1}{4d}}$, converge of $n^{-\frac{4}{4+d}}$
@@ -481,7 +481,7 @@ Fall 2017: Statistics for data science
   - eigenvectors : $U=(u_1 \cdots u_p)$ s.t. $Qu_j=\lambda_j u_j$ (unique if eigenvalues distinct)
   - eigenvalues : $\Lambda=diag(\lambda_1,\ldots,\lambda_p)$ real
   - rank of $Q$ : number of non-zero eigenvalues
-- singular value decomposition : any $n\times p$ real matrix can be factorised as $Q=U\Sigma V^\top$with $U$ $n\times n$ left singular vectors, $\Sigma$ $n\times p$ singular values, $V$ $p\times p$ right singular vectors
+- singular value decomposition : any $n\times p$ real matrix can be factorised as $Q=U\Sigma V^\top$with $U$ $n\times n$ left unitary singular vectors, $\Sigma$ $n\times p$ diagonal non negative singular values, $V$ $p\times p$ right unitary singular vectors
   - $U$ : eigenvectors of $QQ^\top$, vectors corresponding to non-zero singular values form orthonormal basis $\mathcal Q$
   - $V$ : eigenvectors of $Q^\top Q$, vectors corresponding to zero singular values form orthonormal basis $\mathcal M^\bot(Q)$
   - $\Sigma^2$ : eigenvalues of $QQ^\top$ and $Q^\top Q$
@@ -548,7 +548,7 @@ Fall 2017: Statistics for data science
   - for real $W$, $W^2\sim F_{1,n-p}\iff W\sim t_{n-p}$
   - 100$(1-\alpha)$% CI : $c^\top\hat\beta\pm t_{n-p}(\alpha/2)\sqrt{S^2c^\top(X^\top X)^{-1}c}$
   - $r$th coordinate : $\beta_r=c_r^\top\beta$ with $c_r=1$ only at $r$th position, $\hat\beta_r\pm t_{\alpha/2}\sqrt{S^2v_{rr}}$ with $v_{r,s}$ $r$, $s$ element of $(X^\top X)^{-1}$ 
-- prediction intervals : confidence bounds on potential response, $Y_+x_+^\top\beta+\epsilon_+$
+- prediction intervals : confidence bounds on potential response, $Y_+=x_+^\top\hat\beta+\epsilon_+$
   - base : $\frac{x_+^\top\hat\beta-Y_+}{\sqrt{S^2\{1+x_+^\top(X^\top X)^{-1}x_+\}}}\sim t_{n-p}$
   - CI : $x_+^\top\hat\beta\pm t_{n-p}(\alpha/2)\sqrt{S^2\{1+x_+^\top(X^\top X)^{-1}x_+\}}$
 - coefficient of determiniation 
@@ -560,7 +560,7 @@ Fall 2017: Statistics for data science
   - $E[\hat\beta]=\beta$
   - $cov[\hat\beta]=\sigma^2(X^\top X)^{-1}$
   - $E[S^2]=\sigma^2$
-- Gauss-Markov : $Y_{n\times 1}=X_{n\times p}\beta_{p\times 1}+\epsilon_{n\times 1}$ with $p<n$, $E[\epsilon]=0$, $cov[\epsilon]=\sigma^2 I$, implies $\hat\beta (X^\top X)^{-1}X^\top Y$ best linear unbiased estimator of $\beta$, only for unbiased estimator
+- Gauss-Markov : $Y_{n\times 1}=X_{n\times p}\beta_{p\times 1}+\epsilon_{n\times 1}$ with $p<n$, $E[\epsilon]=0$, $cov[\epsilon]=\sigma^2 I$, implies $\hat\beta =(X^\top X)^{-1}X^\top Y$ best linear unbiased estimator of $\beta$, only for unbiased estimator
 - large sample distribution of $\hat\beta$ : $Y_n=X_n\beta+\epsilon_n$, $X_n$ full rank $p$, $\max_{1\le i\le n}[x^\top_i(X_n^\top X_n)^{-1} x_i]\overset{n\to\infty}\to 0$, $E[\epsilon_n]=0$, $cov[\epsilon_n]=\sigma^2 I_{n\times n}$ implies $\hat\beta_n=(X_n^\top X_n)^{-1}X_n^\top Y_n$ satisfies $(X_n^\top X_n)^{1/2}(\hat\beta_n -\beta)\overset{d}\to N_p(0,\sigma^2 I_{p\times p})$
 - assumptions : if one fail, gaussian linear regression inappropriate
   - linearity : $E[Y]$ is linear in $X$
@@ -572,7 +572,7 @@ Fall 2017: Statistics for data science
     - influential observations
   - cannot prove assumption : can only provide evidence in favour or against
 - correct model : $e\sim N(0,\sigma^2(I-H))$, residuals ancillary
-- standardised residuals : $r_i=\frac{e_i}{s\sqrt{1-h_{ii}}}$ as residual correlated and unequal variances, reduce variance to $1$
+- standardised (studentized) residuals : $r_i=\frac{e_i}{s\sqrt{1-h_{ii}}}$ as residual correlated and unequal variances, reduce variance to $1$
 - checking for linearity : no correlation should appear between explanatory variables and residuals, by linearity $X^\top e=0$
   - plot standardised residuals $r$ against each covariate : no systematic patterns should appear
   - plot standardised residuals $r$ against covariates left out of model : no systematic patterns should appear
@@ -603,8 +603,8 @@ Fall 2017: Statistics for data science
   - under hypothesis $H_0:\beta_2=0$, $\norm{e_1-e}^2\sim\sigma^2\chi_{p-q}^2$ 
     - test statistic : $T=\frac{(RSS(\hat\beta_1)-RSS(\hat\beta))/(p-q)}{RSS(\hat\beta)/(n-p)}\sim F_{p-q,n-p}$
     - reject $H_0$ if $p\le \alpha$ : $p=P_{H_0}[T(Y)\ge\tau]=P[F_{p-q,n-p}\ge\tau]$ for $T=\tau$
-- analysis of variance : groups of columns s.t. $X=(1\; X_1\cdots X_r)$ of size $1\times 1, 1\times q_1,\ldots, 1\times q_r$, $\beta=(\beta_0\;\beta_1\cdots\beta_r)$ of size $1\times 1,1\times q_1,\ldots,1\times q_r$, 
-  - proceed as before $\norm{e_0}^2=\norm{e_r}^2+\sum_{k=0}^{r-1}\norm{e_{k+1}-e_k}^2=RSS_r+(RSS_k-RSS_{k+1})$ with $RSS_k$ for $\hat Y_k$ with $v_k$ degree of freedom
+- analysis of variance : groups of columns s.t. $X=(1\; X_1\cdots X_r)$ of size $1\times 1, 1\times q_1,\ldots, 1\times q_r$, $\beta=(\beta_0\;\beta_1\cdots\beta_r)$ of size $n\times 1,n\times q_1,\ldots,n\times q_r$, 
+  - proceed as before $\norm{e_0}^2=\norm{e_r}^2+\sum_{k=0}^{r-1}\norm{e_{k+1}-e_k}^2=RSS_r+\sum_{k=0}^{r-1}(RSS_k-RSS_{k+1})$ with $RSS_k$ for $\hat Y_k$ with $v_k$ degree of freedom
   - $F$-statistic : $F_k=\frac{(RSS_{k-1}-RSS_k) / (v_{k-1}-v_k)}{RSS_r/v_r}\sim F_{v_{k-1}-v_k,v_r}$
   - anova table
   - significance : order dependent unless orthogonal terms
@@ -620,7 +620,7 @@ Fall 2017: Statistics for data science
   - Akaike information critera : minimise information distance, estimated by $AIC=-2\hat l+2p$ ( $\equiv n\log\hat\sigma^2+2p$ in linear model) with $\hat l$ maximised log likelihood for given model, tend to choose too complicated models
     - improved/corrected verson : $AIC_c=AIC+\frac{2p(p+1)}{n-p-1}$ for regression
     - Bayes' information criterion : $BIC=-2\hat l+p\log n$ model selection consistent
-    - mallows : $C_p=\frac{SS_p}{s^2}+2p-n$ with $SS_p$ is RSS for fitted model and $s^2$ estimate $\sigma^2$
+    - mallows : $C_p=\frac{SS_p}{s^2}+2p-n$ with $SS_p$ is RSS for fitted model and $s^2$ estimate $\sigma^2$ under full model
 - automatic model building : little theoretical basis, lack objective function
   - forward selection : start from model with constant only, add each term separately, if none significant stop otherwise update model with most significant new term
   - backward selection : start from model with all terms, if all terms significant, stop otherwise update model dropping term with smallest $F$-statistic
@@ -692,7 +692,7 @@ Fall 2017: Statistics for data science
   - staturated model : #parameters = #observations
   - staturated loglikelihood : $l_n(\eta)=\eta^\top Y+\sum_{i=1}^n\gamma(\eta_i)$ (replace $x_i^\top\beta$ by $\eta_i$)
   - scaled deviance : $D=2(l_n(\hat\eta)-l_n(\hat\beta))=2((\hat\eta-X_n\hat\beta)^\top Y+\sum_{i=1}^n(\gamma(\hat\eta_i)-\gamma(x_i^\top\hat\beta)))\ge 0$, small good fit, sums of squares for gaussian
-  - nested model : $\hat\beta^A$ with $p$ free parameters, $\hat\beta^B$ for $q<p$ free parameters and $p-q$ fixed ones
+  - nested model : $\hat\beta^A$ with $p$ free parameters, $\hat\beta^B$ nested for $q<p$ free parameters and $p-q$ fixed ones
     - likelihood ratio test : $2(l_n(\hat\beta^A)-l_n(\hat\beta^B))=D_B-D_A\overset{d}\to\chi_{p-q}^2$ when B correct
 - diagnostics : use sums of square and final iterate of IWLS
   - leverage : $h_{jj}$ $j$th diagonal element of $H=V^{1/2}(\hat\beta)X_n(X_n^\top V(\hat\beta)X_n)^{-1}X_n^\top V^{1/2}(\hat\beta)$

@@ -191,9 +191,9 @@ Fall 2015: Algèbre
   - noyau : $\Ker(f)=\{g\in G\mid f(g)=e_H\}$
   - injectif ssi $\Ker(f)=\{e_G\}$
   - image : $\Im(f)=\{h\in H\mid \exists g\in G\text{ avec } f(g)=h\}$
-- **théorèmes de structure des groupes abéliens d'ordre $n$ finis** : tous produit de groupes cycliques
+- **théorèmes de structure des groupes abéliens d'ordre $n​$ finis** : tous produit de groupes cycliques
   - $G\cong C_{d_1}\times\cdots\times C_{d_r}$ où $d_1|\cdots|d_r\in\N$
-  - $G\cong C_{d_1^{k_1}}\times\cdots\times C_{p_r^{k_r}}$ où $n=p_1^{k_1}\cdots p_r^{k_r}$ premiers
+  - $G\cong C_{p_1^{k_1}}\times\cdots\times C_{p_r^{k_r}}$ où $n=p_1^{k_1}\cdots p_r^{k_r}$ premiers
 
 ## Théorème des restes chinois
 

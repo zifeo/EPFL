@@ -14,13 +14,11 @@ This work is licensed under [GNU General Public License v3.0](https://github.com
 
 As courses names change regulary, they are identified by their unique? code (`school`-`number`, e.g. *com300*) which should be googlable (try `EPFL com300`) or at least searchable over the [Internet Archive](https://web.archive.org).
 
-Images and screenshots of slides and lectures remain property of their respective authors and are thus not distributed. You can claim easily access by sending an email to « epfl **‹ at ›** zifeo **‹ dot ›** com » from your own EPFL email provided that your name appears in [IS-Academia registered students](https://is-academia.epfl.ch/publicaccess-Bachelor-Master).
+Images and screenshots of slides and lectures remain property of their respective authors and are thus not distributed. You can claim easily access by sending an email to « epfl **‹ at ›** zifeo **‹ dot ›** com » from your own EPFL email.
 
 ## Rendering
 
-Markdown files are optimized for [Typora](https://typora.io), one of best editor with MathJax support available on macOS, Windows and Linux. PDF export is then easy and nice.
-
-Alternatively, you might want to generate PDF through LaTeX using [Pandoc](https://github.com/jgm/pandoc).
+Markdown files are optimized for [Typora](https://typora.io), one of best editor with MathJax support available on macOS, Windows and Linux. PDF export is then easy and nice. Alternatively, you might want to generate PDF through LaTeX using [Pandoc](https://github.com/jgm/pandoc).
 
 ## Missing material
 
