@@ -25,8 +25,9 @@ Markdown files are optimized for [Typora](https://typora.io), one of best editor
 Following courses are missing from the full curriculum (due to limited time):
 
 - Network Tour of Data Science : EE558
+- Managing organizations I & II : HUM435
 - Applied Data Analysis : CS401
-- ​Data Visualization : COM480
+- Data Visualization : COM480
 - Entrepreneurship : HUM348
 - Digital humanities : HUM369
 - Economic news and theories : HUM259
