@@ -29,7 +29,7 @@ Fall 2017: Sensorimotor neuroprosthetics
   - 27 muscles
   - 17K cutaneous mechanoreceptors
 
-![133E90B4-407D-4BD7-9627-6C7FB405A0FD](img/133E90B4-407D-4BD7-9627-6C7FB405A0FD.png)
+![133E90B4-407D-4BD7-9627-6C7FB405A0FD](img/133E90B4-407D-4BD7-9627-6C7FB405A0FD.jpg)
 
 - natural system architecture
   - mechanism : skeleton
@@ -64,7 +64,7 @@ Fall 2017: Sensorimotor neuroprosthetics
   - CIPS : system input
 
 
-![ABAE5A65-B40C-4331-BC0E-6EBE7B35BAA3](img/ABAE5A65-B40C-4331-BC0E-6EBE7B35BAA3.png)
+![ABAE5A65-B40C-4331-BC0E-6EBE7B35BAA3](img/ABAE5A65-B40C-4331-BC0E-6EBE7B35BAA3.jpg)
 
 - theories : possible theories
 
@@ -98,13 +98,13 @@ Fall 2017: Sensorimotor neuroprosthetics
 
   - controls
 
-    - FARS : neural ingredients of reach and grasp in terms of functional schemas, convert information to grasp affordances that are selected given task constraints, execution unfolds with a sequencing mechanism that monitor phases (maximum aperture reached, object contact) implemented by basal ganglia and presupplementary motor area F6 via inhibition and disinhibition![2E043887-FD76-47AF-B402-5027A0A57527](img/2E043887-FD76-47AF-B402-5027A0A57527.png)
+    - FARS : neural ingredients of reach and grasp in terms of functional schemas, convert information to grasp affordances that are selected given task constraints, execution unfolds with a sequencing mechanism that monitor phases (maximum aperture reached, object contact) implemented by basal ganglia and presupplementary motor area F6 via inhibition and disinhibition![2E043887-FD76-47AF-B402-5027A0A57527](img/2E043887-FD76-47AF-B402-5027A0A57527.jpg)
 
-    - Hoff-Arbib : coordination of timing transport and preshape, time-to-completion signal, explain temporal relation of hand kinematics with finger aperture kinematics, modular decomposition of transport, preshape and enclose controllers, accounts for smooth correction in response to position or object size alteration, temporal invariance, schema that needs longer time slows the other down![70B87DBA-412E-403C-80D1-A87616DABDF4](img/70B87DBA-412E-403C-80D1-A87616DABDF4.png)
+    - Hoff-Arbib : coordination of timing transport and preshape, time-to-completion signal, explain temporal relation of hand kinematics with finger aperture kinematics, modular decomposition of transport, preshape and enclose controllers, accounts for smooth correction in response to position or object size alteration, temporal invariance, schema that needs longer time slows the other down![70B87DBA-412E-403C-80D1-A87616DABDF4](img/70B87DBA-412E-403C-80D1-A87616DABDF4.jpg)
 
     - Kawato : explain grip force-load force coupling, how CNS adjust grip force according to predicted using forward and inverse models, how CNS guarantees stability, 3 key computational elements arm controller, grip controller and forward model, good for single object
 
-      ![CF974798-4BC8-420B-BB04-21E18AFCB153](img/CF974798-4BC8-420B-BB04-21E18AFCB153.png)
+      ![CF974798-4BC8-420B-BB04-21E18AFCB153](img/CF974798-4BC8-420B-BB04-21E18AFCB153.jpg)
 
       - mosaic model : multiple objects, modular adaptive controller learn multiple dynamics with different properties, can implement Karato model
 
@@ -121,11 +121,11 @@ Fall 2017: Sensorimotor neuroprosthetics
     - Oztop : developmentally oriented model, learn finger configuration for stable grasping
     - Uno : synthesize human like grasph using human motion capture data, produce right finger configuration, input visual information, output motor joint angles
 
-- Manipolandum : upper limb, net stifness = sum stifness + stifness field![E53CF004-F5AC-4A61-A64D-909BE79FED37](img/E53CF004-F5AC-4A61-A64D-909BE79FED37.png)
+- Manipolandum : upper limb, net stifness = sum stifness + stifness field![E53CF004-F5AC-4A61-A64D-909BE79FED37](img/E53CF004-F5AC-4A61-A64D-909BE79FED37.jpg)
   - impedance control : resistance to imposed motion), might achieve stability, hard to show (null field vs divergent force field without require change in applied force), CNS voluntarily control magnitude, shape and orientation of endpoint stiffness in predictive way independent of force
 
 - optimal control
-  ![8F7DD468-62D6-4CBB-BF17-03BDCC61123E](img/8F7DD468-62D6-4CBB-BF17-03BDCC61123E.png)
+  ![8F7DD468-62D6-4CBB-BF17-03BDCC61123E](img/8F7DD468-62D6-4CBB-BF17-03BDCC61123E.jpg)
 
 - motor primitives
 
@@ -146,7 +146,7 @@ Fall 2017: Sensorimotor neuroprosthetics
 
   - manipulation motor control posture : PCA for coarser level, finer level distributed among all joint angles
 
-    ![D641A9C4-BE68-4011-A272-3B01E3B403BA](img/D641A9C4-BE68-4011-A272-3B01E3B403BA.png)
+    ![D641A9C4-BE68-4011-A272-3B01E3B403BA](img/D641A9C4-BE68-4011-A272-3B01E3B403BA.jpg)
 
   - upper limb synergies : modification induced by disorders
 
@@ -182,16 +182,16 @@ Fall 2017: Sensorimotor neuroprosthetics
 - orthotics : modify structural or functional characteristices of muscles
 - prostheses : grasp
   - HandMaster : array of 5 electrodes, control unit sends bi-phasic pulses, initiatve patterns
-    ![1D182606-AC01-4949-9809-F3E11C5D1164](img/1D182606-AC01-4949-9809-F3E11C5D1164.png)
+    ![1D182606-AC01-4949-9809-F3E11C5D1164](img/1D182606-AC01-4949-9809-F3E11C5D1164.jpg)
 
 
   - Bionic Glove : open loop with 4 superficial electrodes (3 stimulations with 1 reference), voluntary wrist flexion initiate stimulation
-    ![8AD9BAA5-0C35-494F-9793-11A9AD416227](img/8AD9BAA5-0C35-494F-9793-11A9AD416227.png)
+    ![8AD9BAA5-0C35-494F-9793-11A9AD416227](img/8AD9BAA5-0C35-494F-9793-11A9AD416227.jpg)
   - FreeHand : most advanced, 8 implanted epimysical electrodes and implanted stimulator, controlled by shoulder, high reliability
   - cuff electrodes : recruit several muscles, highly selective when possible, smoothness of recruitment questionable
 
 - functional electical therapy FET : apply ES to clinical intervention for training, improve voluntary control of those muscles, acute stroke subjects benefit more
-  ![A16261F2-6473-4E2C-894C-F75416EC2B3F](img/A16261F2-6473-4E2C-894C-F75416EC2B3F.png)
+  ![A16261F2-6473-4E2C-894C-F75416EC2B3F](img/A16261F2-6473-4E2C-894C-F75416EC2B3F.jpg)
 
 - implantable (intramuscular) systems for FET : electrode arrays, increased selectivty, simplify positioning problem, allow stimulation and EMG sensing, reduce preparation time, use for transradial amputee
 
@@ -215,10 +215,10 @@ Fall 2017: Sensorimotor neuroprosthetics
     - exoskeleton : passive not that effective, lack variability and activity
     - soft exoskeleton
 - gait rehabilitation platform
-  ![3FDF7A1F-980A-4732-B446-DE4130509D41](img/3FDF7A1F-980A-4732-B446-DE4130509D41.png)
+  ![3FDF7A1F-980A-4732-B446-DE4130509D41](img/3FDF7A1F-980A-4732-B446-DE4130509D41.jpg)
   - gravity : kinetic/potential energy transfert, cycle to cycle stability and reproducibility
     - gravity-assist : transparent mode, lift, forward-correction
-      ![95E9B670-7846-435A-A928-CE14EE28ACCE](img/95E9B670-7846-435A-A928-CE14EE28ACCE.png)
+      ![95E9B670-7846-435A-A928-CE14EE28ACCE](img/95E9B670-7846-435A-A928-CE14EE28ACCE.jpg)
     - transparent mode
 - neuroprosthetics : developing neurl prostheses, series of devices than can substitute motor, sensory or cognitive modality that might have been damaged
   - neuromodulation : stimulation of nervous system to restore function
@@ -227,15 +227,15 @@ Fall 2017: Sensorimotor neuroprosthetics
     - 1963 : primitive brain radiocontrolled
   - neuroprosthesis
     - cochlear implants : works well as stimulating individual sensor, not the cortex
-      ![347A09D8-950C-452B-8E34-625FAC1520A5](img/347A09D8-950C-452B-8E34-625FAC1520A5.png)
+      ![347A09D8-950C-452B-8E34-625FAC1520A5](img/347A09D8-950C-452B-8E34-625FAC1520A5.jpg)
     - retinal neurprosthesis : patients "promised" to see again depressed by the results
-      ![8EA82B9F-7CB9-4EC9-A7C7-43749C3F1906](img/8EA82B9F-7CB9-4EC9-A7C7-43749C3F1906.png)
+      ![8EA82B9F-7CB9-4EC9-A7C7-43749C3F1906](img/8EA82B9F-7CB9-4EC9-A7C7-43749C3F1906.jpg)
     - pharmacological : monoamines modulate brain and spinal states, dopmaine replacement (parkinson)
     - neuromodulation : deep brain stimulation of basal ganglia, optogenetics
-      ![83E75E9B-2737-4504-B851-2EFF4338E300](img/83E75E9B-2737-4504-B851-2EFF4338E300.png)
+      ![83E75E9B-2737-4504-B851-2EFF4338E300](img/83E75E9B-2737-4504-B851-2EFF4338E300.jpg)
     - ​
   - brain machine interface : extract information from neural recordings to control devices, major issues stability of neuronal recording, of decoding algorithms and wireless embedded electronics
-    ![F9B8359D-B56E-411B-B968-39021CBF5D50](img/F9B8359D-B56E-411B-B968-39021CBF5D50.png)
+    ![F9B8359D-B56E-411B-B968-39021CBF5D50](img/F9B8359D-B56E-411B-B968-39021CBF5D50.jpg)
   - train spinal circuits : spinal cord injury, short term enabling activity, long term activity based plasticity, using modulation serotonin and glutamatergic excitation to revive neurons, 3D spinal cord reconstruction, nerves rewires 
   - activity based training : enable short-term activity for further long-term plasticity
     - not very effective in human/rate : in case of severe contusion
@@ -284,10 +284,10 @@ Fall 2017: Sensorimotor neuroprosthetics
   - non back drivability : hold grasp once power switched off, power saving
 
 - SMART hand prototype : reliability, grasph capabilities, cosmesis
-  ![40520C0F-BDDC-48FA-99D0-9740F501B153](img/40520C0F-BDDC-48FA-99D0-9740F501B153.png)
+  ![40520C0F-BDDC-48FA-99D0-9740F501B153](img/40520C0F-BDDC-48FA-99D0-9740F501B153.jpg)
 
 - OPENHAND prototype : multi-layers structures (edidermis as compilant materials, nail and bones as stiff materials), non-linear and time-dependent characteristic
-  ![A5BB3653-0399-4647-BA84-A4845AE14A08](img/A5BB3653-0399-4647-BA84-A4845AE14A08.png)
+  ![A5BB3653-0399-4647-BA84-A4845AE14A08](img/A5BB3653-0399-4647-BA84-A4845AE14A08.jpg)
 
 - user-prosthesis interface
 
@@ -299,37 +299,37 @@ Fall 2017: Sensorimotor neuroprosthetics
   - invasive : direct neural control (ECoG, LFP), CNS, PNS
 
 - sensing the brain : TIME vs SPACE invasiveness tradeoff
-  ![1986EA7B-1491-41D7-BDA4-E16B4E42B4CC](img/1986EA7B-1491-41D7-BDA4-E16B4E42B4CC.png)
+  ![1986EA7B-1491-41D7-BDA4-E16B4E42B4CC](img/1986EA7B-1491-41D7-BDA4-E16B4E42B4CC.jpg)
 
   - surface EMG : not-homologous voluntary movements coded as prosthesis movements, require long training, hard to control more than two degrees of freedom, cheap
 
   - IMES : sense myoeletrical signal at source, BION
 
   - electrodes
-    ![0A5B886C-4FF4-4A38-8AB5-779BB0B483DC](img/0A5B886C-4FF4-4A38-8AB5-779BB0B483DC.png)
+    ![0A5B886C-4FF4-4A38-8AB5-779BB0B483DC](img/0A5B886C-4FF4-4A38-8AB5-779BB0B483DC.jpg)
 
     - TIME : transveral intrafascicular multichannel electrodes, selective
 
-      ![29B1192D-CF1E-40DE-8689-D9DFF32DC333](img/29B1192D-CF1E-40DE-8689-D9DFF32DC333.png)
+      ![29B1192D-CF1E-40DE-8689-D9DFF32DC333](img/29B1192D-CF1E-40DE-8689-D9DFF32DC333.jpg)
 
   - TMR : sensory feedback possible but difficult to be daily usable
-    ![7947D531-9629-4290-9C6B-22F3595A1C84](img/7947D531-9629-4290-9C6B-22F3595A1C84.png)
+    ![7947D531-9629-4290-9C6B-22F3595A1C84](img/7947D531-9629-4290-9C6B-22F3595A1C84.jpg)
 
   - sensory feedback : intracortical performance limited, reuse existing neural structures when possible, closed-loop control allow user to achieve performance close to natural ones
-    ![8610969C-9FC8-474D-AB5C-04F7BF1DDF0D](img/8610969C-9FC8-474D-AB5C-04F7BF1DDF0D.png)
+    ![8610969C-9FC8-474D-AB5C-04F7BF1DDF0D](img/8610969C-9FC8-474D-AB5C-04F7BF1DDF0D.jpg)
 
 - texture recognition
-  ![88EC547E-9E49-4C4D-9DFE-EFD9B4BD42D4](img/88EC547E-9E49-4C4D-9DFE-EFD9B4BD42D4.png)
+  ![88EC547E-9E49-4C4D-9DFE-EFD9B4BD42D4](img/88EC547E-9E49-4C4D-9DFE-EFD9B4BD42D4.jpg)
 
 - embodiment : thoughts, emotions, behaviour based on sensori experiments and positions
 
 - proprioception : sense of limb position and movements, use sensory re-mapping in real-time in conjuntion with tactile feedback
 
 - quest for bionic hand
-  ![7F2D1184-890F-4220-8277-740FA30A6BCA](img/7F2D1184-890F-4220-8277-740FA30A6BCA.png)
+  ![7F2D1184-890F-4220-8277-740FA30A6BCA](img/7F2D1184-890F-4220-8277-740FA30A6BCA.jpg)
 
 - i4LIFE
-  ![F66EC653-B223-4006-A709-F3755BED101B](img/F66EC653-B223-4006-A709-F3755BED101B.png)
+  ![F66EC653-B223-4006-A709-F3755BED101B](img/F66EC653-B223-4006-A709-F3755BED101B.jpg)
 
 
 

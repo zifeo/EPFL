@@ -544,7 +544,7 @@ Spring 2015: Probabilities & statistics
 
 ### Discrete vs continuous
 
-![](img/232-1.png)
+![](img/232-1.jpg)
 
 ### Facts
 
