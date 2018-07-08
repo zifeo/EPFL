@@ -23,7 +23,7 @@ $$
 
 > [GNU General Public License v3.0](https://github.com/zifeo/EPFL/blob/master/LICENSE) licensed. Source available on [github.com/zifeo/EPFL](https://github.com/zifeo/EPFL).
 
-Fall 2017: Statistics for data science
+Fall 2017: Statistics for Data Science
 
 [TOC]
 

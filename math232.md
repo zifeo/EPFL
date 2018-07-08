@@ -22,7 +22,7 @@ $$
 
 > [GNU General Public License v3.0](https://github.com/zifeo/EPFL/blob/master/LICENSE) licensed. Source available on [github.com/zifeo/EPFL](https://github.com/zifeo/EPFL).
 
-Spring 2015: Probabilities & statistics
+Spring 2015: Probabilities & Statistics
 
 [TOC]
 
