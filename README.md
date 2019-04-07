@@ -18,7 +18,7 @@ Images and screenshots of slides and lectures remain property of their respectiv
 
 ## Rendering
 
-Markdown files are optimized for [Typora](https://typora.io), one of best editor with MathJax support available on macOS, Windows and Linux. PDF export is then easy and nice. Alternatively, you might want to generate PDF through LaTeX using [Pandoc](https://github.com/jgm/pandoc).
+Markdown files are optimized for [Typora](https://typora.io), one of best editor with MathJax support available on macOS, Windows and Linux. PDF export is then easy and nice. [Inline math](https://support.typora.io/Math/#inline-math) should be enabled. Alternatively, you might want to generate PDF through LaTeX using [Pandoc](https://github.com/jgm/pandoc).
 
 ## Material
 
