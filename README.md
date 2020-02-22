@@ -14,7 +14,7 @@ This work is licensed under [GNU General Public License v3.0](https://github.com
 
 As courses names change regulary, they are identified by their unique? code (`school`-`number`, e.g. *com300*) which should be googlable (try `EPFL com300`) or at least searchable over the [Internet Archive](https://web.archive.org).
 
-Images and screenshots of slides and lectures remain property of their respective authors and are thus not distributed. You can claim easily access by sending an email to « epfl **‹ at ›** zifeo **‹ dot ›** com » from your *own* EPFL email.
+Images and screenshots of slides and lectures remain property of their respective authors and are thus not distributed. You can claim easily them by sending an email to « epfl **‹ at ›** zifeo **‹ dot ›** com » from your *own* EPFL email.
 
 ## Rendering
 
